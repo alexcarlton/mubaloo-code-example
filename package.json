@@ -4,18 +4,22 @@
   "description": "React code test for Mubaloo interview",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node src/server.js"
+    "start": "NODE_ENV=development babel-node src/server.js"
   },
   "author": "Alex Smith",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
     "webpack": "^4.17.2",
     "webpack-dev-middleware": "^3.2.0"
   }
