@@ -1,0 +1,14 @@
+@import '~/style/theme';
+
+.textInput {
+  background-color: $input-background-color;
+  border: solid 1px $input-border-color;
+  border-radius: 5px;
+  height: 36px;
+  font-size: $font-size-normal;
+  padding: 0 $extra-small-spacing;
+
+  &:focus {
+    outline: none;
+  }
+}
