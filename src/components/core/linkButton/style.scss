@@ -1,0 +1,20 @@
+@import '~/style/theme';
+
+.linkButton {
+  padding: $extra-small-spacing;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 100px;
+  background-color: $primary-color;
+  color: white;
+  text-decoration: none;
+  -webkit-box-shadow: 0 10px 34px -4px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 0 10px 34px -4px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 10px 34px -4px rgba(0, 0, 0, 0.28);
+}
+
+.disabled {
+  background-color: grey;
+  pointer-events: none;
+  opacity: 0.3;
+}

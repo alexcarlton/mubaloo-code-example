@@ -2,7 +2,7 @@
 const initialState = {
   title: null,
   name: '',
-  dateOfBirth: '2000-01-01',
+  dateOfBirth: '',
 }
 
 export default function form(state = initialState, action) {
