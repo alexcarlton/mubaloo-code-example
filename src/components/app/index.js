@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import createStore from '~/redux/store'
 import { routes } from '~/routes'
+import '~/style/globalStyle'
 
 const store = createStore()
 

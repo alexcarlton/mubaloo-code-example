@@ -1,5 +1,7 @@
+@import '~/style/theme';
+
 .hello {
-  background-color: red;
+  background-color: $primaryColor;
   height: 100px;
   width: 100px;
 }
