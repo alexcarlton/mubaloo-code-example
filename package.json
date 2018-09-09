@@ -4,8 +4,19 @@
   "description": "React code test for Mubaloo interview",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node src/server.js"
   },
   "author": "Alex Smith",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "webpack": "^4.17.2",
+    "webpack-dev-middleware": "^3.2.0"
+  }
 }
