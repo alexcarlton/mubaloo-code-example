@@ -1,7 +1,7 @@
 import path from 'path'
 import express from 'express'
 import webpack from 'webpack'
-import webpackConfig from '../webpack.config.dev'
+import webpackConfig from '../webpack.config'
 import webpackDevMiddleware from 'webpack-dev-middleware'
 
 const port = process.env.PORT || '3000'
