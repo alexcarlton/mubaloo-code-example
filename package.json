@@ -1,0 +1,11 @@
+{
+  "name": "mubaloo-code-test",
+  "version": "1.0.0",
+  "description": "React code test for Mubaloo interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Smith",
+  "license": "ISC"
+}
