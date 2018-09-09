@@ -7,6 +7,7 @@
     "start": "NODE_ENV=development babel-node src/server.js",
     "lint:js": "eslint src/**/*.js",
     "format:js": "prettier --single-quote --trailing-comma all --no-semi --print-width 180 --write \"src/**/*.js\"",
+    "format:sass": "stylelint src/**/*.scss --fix",
     "precommit": "lint-staged"
   },
   "author": "Alex Smith",
@@ -31,6 +32,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.0.1",
@@ -40,7 +42,12 @@
     "eslint-plugin-react": "^7.11.1",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.2",
+    "node-sass": "^4.9.3",
     "prettier": "^1.14.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "stylelint": "^9.5.0",
+    "stylelint-config-standard": "^18.2.0",
     "webpack": "^4.17.2",
     "webpack-dev-middleware": "^3.2.0"
   },
@@ -48,6 +55,10 @@
     "src/**/*.js": [
       "npm run format:js",
       "npm run lint:js",
+      "git add"
+    ],
+    "src/**/*.*css": [
+      "npm run format:sass",
       "git add"
     ]
   }
