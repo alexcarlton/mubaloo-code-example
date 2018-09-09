@@ -27,10 +27,27 @@ export default {
           'babel-loader'
         ],
       },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            query: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName:"[path]_[local]--[hash:base64:6]"
+            }
+          },
+          'sass-loader',
+        ]
+      },
     ]
   },
 
   resolve: {
+    extensions: ['.js', '.scss'],
     alias: {
       "~": path.resolve(__dirname, 'src/'),
     }

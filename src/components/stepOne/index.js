@@ -1,12 +1,8 @@
 import React from 'react'
+import Div from '~/components/core/div'
 
 export default props => {
   const { value, incrementValue } = props
 
-  return (
-    <div>
-      <h1>{value}</h1>
-      <button onClick={() => incrementValue()} />
-    </div>
-  )
+  return <Div>Hello</Div>
 }
