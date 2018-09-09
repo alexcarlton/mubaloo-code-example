@@ -1,0 +1,10 @@
+@import '~/style/theme';
+
+.inputContainer {
+  margin: $small-spacing 0;
+  flex-direction: column;
+}
+
+.inputsContainer {
+  flex-direction: column;
+}
