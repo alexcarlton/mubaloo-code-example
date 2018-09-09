@@ -12,4 +12,4 @@ class StepOneContainer extends Component {
   }
 }
 
-export default connect(state => ({ form: state.form }))(StepOneContainer)
+export default connect(state => state)(StepOneContainer)
