@@ -4,7 +4,7 @@ import webpack from 'webpack'
 import webpackConfig from '../webpack.config.dev'
 import webpackDevMiddleware from 'webpack-dev-middleware'
 
-const port = process.env.NODE_ENV || '3000'
+const port = process.env.PORT || '3000'
 const app = express()
 const compiler = webpack(webpackConfig)
 
@@ -12,7 +12,7 @@ app.listen(port, error => {
   if(error){
     throw new Error(error)
   }
-  console.log('Server listening at port: ' + port)
+  console.log(`Server listening at port: ${port}`)
 })
 
 app.get('/', (request, response) => {
