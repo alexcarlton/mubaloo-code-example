@@ -15,12 +15,13 @@ app.listen(port, error => {
   console.log(`Server listening at port: ${port}`)
 })
 
-app.get('/', (request, response) => {
-  response.sendFile(path.join(__dirname, '../src/index.html'))
-})
-
 // Bundle index.js to bundle.js with Webpack and serve it at /bundle.js
 app.use(webpackDevMiddleware(compiler, {
     noInfo: true,
     publicPath: webpackConfig.output.publicPath
 }))
+
+app.get('*', (request, response) => {
+  response.sendFile(path.join(__dirname, '../src/index.html'))
+})
+
