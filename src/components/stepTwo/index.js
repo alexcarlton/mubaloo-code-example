@@ -2,7 +2,8 @@ import React from 'react'
 import Container from '~/components/core/container'
 import InputContainer from '~/components/core/inputContainer'
 import InputsContainer from '~/components/core/inputsContainer'
-import DropDown from '~/components/core/dropDown'
+import Div from '~/components/core/div'
+import Geosuggest from '~/components/core/geoSuggest'
 import Label from '~/components/core/label'
 import TextInput from '~/components/core/textInput'
 import DatePicker from '~/components/core/datePicker'
@@ -15,10 +16,10 @@ export default props => {
 
   return (
     <InputsContainer>
-      <H1>Step 1</H1>
+      <H1>Step 2</H1>
       <InputContainer>
-        <Label htmlFor="titleInput">Title</Label>
-        <DropDown id="titleInput" value={title} options={titles} onChange={selection => updateTitle(selection)} />
+        <Label htmlFor="locationInput">Location</Label>
+        <Geosuggest />
       </InputContainer>
       <InputContainer>
         <Label htmlFor="nameInput">Name</Label>
@@ -29,8 +30,8 @@ export default props => {
         <DatePicker id="dateOfBirthInput" value={dateOfBirth} onChange={event => updateDateOfBirth(event.target.value)} />
       </InputContainer>
       <InputContainer>
-        <LinkButton disabled={stepOneError} to="/stepTwo">
-          next
+        <LinkButton disabled={stepOneError} to="/thanks">
+          submit
         </LinkButton>
       </InputContainer>
     </InputsContainer>
