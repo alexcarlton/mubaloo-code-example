@@ -5,6 +5,10 @@ import { routes } from '~/routes'
 
 export default () => (
   <BrowserRouter>
-    <div>{_.map(routes, (route, index) => <Route key={`route-${index}`} path={route.path} component={route.component} exact={route.exact} />)}</div>
+    <div>
+      {_.map(routes, (route, index) => (
+        <Route key={`route-${index}`} path={route.path} component={route.component} exact={route.exact} />
+      ))}
+    </div>
   </BrowserRouter>
 )

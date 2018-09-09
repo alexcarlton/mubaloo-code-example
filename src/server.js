@@ -1,27 +1,28 @@
 import path from 'path'
 import express from 'express'
 import webpack from 'webpack'
-import webpackConfig from '../webpack.config'
 import webpackDevMiddleware from 'webpack-dev-middleware'
+import webpackConfig from '../webpack.config'
 
 const port = process.env.PORT || '3000'
 const app = express()
 const compiler = webpack(webpackConfig)
 
 app.listen(port, error => {
-  if(error){
+  if (error) {
     throw new Error(error)
   }
   console.log(`Server listening at port: ${port}`)
 })
 
 // Bundle index.js to bundle.js with Webpack and serve it at /bundle.js
-app.use(webpackDevMiddleware(compiler, {
+app.use(
+  webpackDevMiddleware(compiler, {
     noInfo: true,
-    publicPath: webpackConfig.output.publicPath
-}))
+    publicPath: webpackConfig.output.publicPath,
+  }),
+)
 
 app.get('*', (request, response) => {
   response.sendFile(path.join(__dirname, '../src/index.html'))
 })
-

@@ -4,7 +4,10 @@
   "description": "React code test for Mubaloo interview",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=development babel-node src/server.js"
+    "start": "NODE_ENV=development babel-node src/server.js",
+    "lint:js": "eslint src/**/*.js",
+    "format:js": "prettier --single-quote --trailing-comma all --no-semi --print-width 180 --write \"src/**/*.js\"",
+    "precommit": "lint-staged"
   },
   "author": "Alex Smith",
   "license": "ISC",
@@ -21,8 +24,26 @@
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.2",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "prettier": "^1.14.2",
     "webpack": "^4.17.2",
     "webpack-dev-middleware": "^3.2.0"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "npm run format:js",
+      "npm run lint:js",
+      "git add"
+    ]
   }
 }
