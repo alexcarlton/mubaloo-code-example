@@ -1,0 +1,12 @@
+@import '~/style/theme';
+
+.container {
+  flex: 1;
+  max-width: $max-page-width;
+  padding: $medium-spacing;
+}
+
+.outerContainer {
+  flex: 1;
+  justify-content: center;
+}

@@ -1,7 +1,3 @@
-@import '~/style/theme';
-
-.hello {
-  background-color: $primaryColor;
-  height: 100px;
-  width: 100px;
+.flexDiv {
+  display: flex;
 }

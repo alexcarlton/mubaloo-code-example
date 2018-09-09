@@ -1,1 +1,1 @@
-export const incrementValue = () => ({ type: 'form/INCREMENT_VALUE' })
+export const updateTitle = title => ({ type: 'form/UPDATE_TITLE', payload: title })

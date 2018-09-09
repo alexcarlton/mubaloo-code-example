@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { incrementValue } from '~/redux/actions/form'
+import { updateTitle } from '~/redux/actions/form'
 import StepOne from '~/components/stepOne'
 
 class StepOneContainer extends Component {
   render() {
-    const { dispatch, form } = this.props
-    const { value } = form
+    const { dispatch } = this.props
 
-    return <StepOne value={value} incrementValue={() => dispatch(incrementValue())} />
+    return <StepOne updateTitle={title => dispatch(updateTitle(title))} />
   }
 }
 
