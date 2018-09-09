@@ -10,7 +10,7 @@ const compiler = webpack(webpackConfig)
 
 app.listen(port, error => {
   if(error){
-    throw new Error('hello')
+    throw new Error(error)
   }
   console.log('Server listening at port: ' + port)
 })
