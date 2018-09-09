@@ -19,7 +19,7 @@ app.get('/', (request, response) => {
   response.sendFile(path.join(__dirname, '../src/index.html'))
 })
 
-// Bundle index.js to bundle.js with Webpack and serves it at /bundle.js
+// Bundle index.js to bundle.js with Webpack and serve it at /bundle.js
 app.use(webpackDevMiddleware(compiler, {
     noInfo: true,
     publicPath: webpackConfig.output.publicPath
