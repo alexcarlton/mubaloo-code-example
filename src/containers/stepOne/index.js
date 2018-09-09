@@ -1,3 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { incrementValue } from '~/redux/actions/form'
+import StepOne from '~/components/stepOne'
 
-export default () => <h1>Step One</h1>
+class StepOneContainer extends Component {
+  render() {
+    const { dispatch, form } = this.props
+    const { value } = form
+
+    return <StepOne value={value} incrementValue={() => dispatch(incrementValue())} />
+  }
+}
+
+export default connect(state => state)(StepOneContainer)
