@@ -3,12 +3,13 @@ import InputContainer from '~/components/core/inputContainer'
 import InputsContainer from '~/components/core/inputsContainer'
 import Geosuggest from '~/components/core/geoSuggest'
 import DateTimePicker from '~/components/core/dateTimePicker'
+import LinkButton from '~/components/core/linkButton'
 import Label from '~/components/core/label'
 import TextArea from '~/components/core/textArea'
 import { H1 } from '~/components/core/text'
 
 export default props => {
-  const { feedback, updateFeedback, updateLocation, location, updateCurrentDateTime, currentDateTime } = props
+  const { feedback, updateFeedback, updateLocation, location, updateCurrentDateTime, currentDateTime, stepTwoComplete } = props
 
   return (
     <InputsContainer>
@@ -24,6 +25,11 @@ export default props => {
       <InputContainer>
         <Label htmlFor="feedbackInput">What did you think of this form?</Label>
         <TextArea id="feedbackInput" onChange={event => updateFeedback(event.target.value)} value={feedback} />
+      </InputContainer>
+      <InputContainer>
+        <LinkButton disabled={!stepTwoComplete} to="/thanks">
+          submit
+        </LinkButton>
       </InputContainer>
     </InputsContainer>
   )

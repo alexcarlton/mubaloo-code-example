@@ -1,5 +1,4 @@
 import React from 'react'
-import Container from '~/components/core/container'
 import InputContainer from '~/components/core/inputContainer'
 import InputsContainer from '~/components/core/inputsContainer'
 import DropDown from '~/components/core/dropDown'
@@ -11,7 +10,7 @@ import { H1 } from '~/components/core/text'
 import titles from './titles'
 
 export default props => {
-  const { updateTitle, updateName, updateDateOfBirth, dateOfBirth, name, title, stepOneError } = props
+  const { updateTitle, updateName, updateDateOfBirth, dateOfBirth, name, title, stepOneComplete } = props
 
   return (
     <InputsContainer>
@@ -29,7 +28,7 @@ export default props => {
         <DatePicker id="dateOfBirthInput" value={dateOfBirth} onChange={event => updateDateOfBirth(event.target.value)} />
       </InputContainer>
       <InputContainer>
-        <LinkButton disabled={stepOneError} to="/stepTwo">
+        <LinkButton disabled={!stepOneComplete} to="/stepTwo">
           next
         </LinkButton>
       </InputContainer>
