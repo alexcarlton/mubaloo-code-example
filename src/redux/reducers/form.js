@@ -6,6 +6,9 @@ const initialState = {
   location: '',
   currentDateTime: null,
   feedback: '',
+  submittingData: false,
+  submissionError: false,
+  dataSubmitted: false,
 }
 
 export default function form(state = initialState, action) {
@@ -22,6 +25,14 @@ export default function form(state = initialState, action) {
       return { ...state, currentDateTime: action.payload }
     case 'form/UPDATE_FEEDBACK':
       return { ...state, feedback: action.payload }
+    case 'form/SUBMIT_USER_DATA_REQUEST':
+      return { ...state, submittingData: true }
+    case 'form/SUBMIT_USER_DATA_SUCCESS':
+      return { ...state, submittingData: false, dataSubmitted: true }
+    case 'form/SUBMIT_USER_DATA_ERROR':
+      return { ...state, submittingData: false, submissionError: true }
+    case 'form/RESET_DATA':
+      return { ...state, submissionError: false, dataSubmitted: false }
     default:
       return state
   }
