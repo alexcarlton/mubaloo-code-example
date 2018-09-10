@@ -1,3 +1,4 @@
+import bodyParser from 'body-parser'
 import path from 'path'
 import express from 'express'
 import webpack from 'webpack'
@@ -15,6 +16,8 @@ app.listen(port, error => {
   console.log(`Server listening at port: ${port}`)
 })
 
+app.use(bodyParser.json())
+
 // Bundle index.js to bundle.js with Webpack and serve it at /bundle.js
 app.use(
   webpackDevMiddleware(compiler, {
@@ -22,6 +25,12 @@ app.use(
     publicPath: webpackConfig.output.publicPath,
   }),
 )
+
+app.post('/answers', (request, response) => {
+  console.log('User Data:')
+  console.log(request.body)
+  response.send()
+})
 
 app.get('*', (request, response) => {
   response.sendFile(path.join(__dirname, '../src/index.html'))

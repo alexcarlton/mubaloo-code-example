@@ -9,6 +9,7 @@ export default {
   mode: mode,
 
   entry: [
+    'babel-polyfill',
     path.resolve(__dirname, 'src/index.js')
   ],
 
