@@ -1,14 +1,14 @@
 import { createSelector } from 'reselect-change-memoize'
 import moment from 'moment'
 
-const calculateStepOneComplete = (title, name, dateOfBirth) => {
-  const emptyString = ''
+const emptyString = ''
 
+const calculateStepOneComplete = (title, name, dateOfBirth) => {
   return title && name !== emptyString && dateOfBirth !== emptyString
 }
 
 const calculateStepTwoComplete = (feedback, location) => {
-  return feedback !== '' && location !== ''
+  return feedback !== emptyString && location !== emptyString
 }
 
 export default createSelector(
