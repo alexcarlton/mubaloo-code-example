@@ -1,0 +1,14 @@
+@import '~/style/theme';
+
+.textArea {
+  background-color: $input-background-color;
+  border: solid 1px $input-border-color;
+  border-radius: 5px;
+  height: 100px;
+  font-size: $font-size-normal;
+  padding: $extra-small-spacing;
+
+  &:focus {
+    outline: none;
+  }
+}

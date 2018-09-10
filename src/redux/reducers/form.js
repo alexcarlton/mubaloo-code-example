@@ -5,6 +5,7 @@ const initialState = {
   dateOfBirth: '',
   location: '',
   currentDateTime: null,
+  feedback: '',
 }
 
 export default function form(state = initialState, action) {
@@ -19,6 +20,8 @@ export default function form(state = initialState, action) {
       return { ...state, location: action.payload }
     case 'form/UPDATE_CURRENT_DATE_TIME':
       return { ...state, currentDateTime: action.payload }
+    case 'form/UPDATE_FEEDBACK':
+      return { ...state, feedback: action.payload }
     default:
       return state
   }
