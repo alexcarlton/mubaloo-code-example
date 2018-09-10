@@ -4,6 +4,7 @@ const initialState = {
   name: '',
   dateOfBirth: '',
   location: '',
+  currentDateTime: null,
 }
 
 export default function form(state = initialState, action) {
@@ -16,6 +17,8 @@ export default function form(state = initialState, action) {
       return { ...state, dateOfBirth: action.payload }
     case 'form/UPDATE_LOCATION':
       return { ...state, location: action.payload }
+    case 'form/UPDATE_CURRENT_DATE_TIME':
+      return { ...state, currentDateTime: action.payload }
     default:
       return state
   }

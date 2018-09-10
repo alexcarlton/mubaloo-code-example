@@ -1,4 +1,5 @@
 import { createSelector } from 'reselect-change-memoize'
+import moment from 'moment'
 
 const calculateStepOneError = (title, name, dateOfBirth) => {
   const emptyString = ''
@@ -13,6 +14,7 @@ export default createSelector(
     return {
       ...formState,
       stepOneError: calculateStepOneError(formState.title, formState.name, formState.dateOfBirth),
+      currentDateTime: formState.currentDateTime || moment().format('YYYY-MM-DDTHH:mm'),
     }
   },
 )
