@@ -5,6 +5,9 @@
 }
 
 .suggestionsContainer {
+  position: absolute;
+  z-index: 10;
+  margin-top: 40px;
   flex-direction: column;
   background-color: $input-background-color;
   font-size: $font-size-normal;

@@ -7,7 +7,7 @@ import formSelector from '~/redux/selectors/form'
 class StepTwoContainer extends Component {
   render() {
     const { dispatch, form } = this.props
-    const { location, currentDateTime, feedback } = form
+    const { location, currentDateTime, feedback, stepTwoComplete } = form
 
     return (
       <StepTwo
@@ -17,6 +17,7 @@ class StepTwoContainer extends Component {
         updateLocation={newLocation => dispatch(updateLocation(newLocation))}
         feedback={feedback}
         updateFeedback={newFeedback => dispatch(updateFeedback(newFeedback))}
+        stepTwoComplete={stepTwoComplete}
       />
     )
   }

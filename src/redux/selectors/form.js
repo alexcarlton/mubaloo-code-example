@@ -1,10 +1,14 @@
 import { createSelector } from 'reselect-change-memoize'
 import moment from 'moment'
 
-const calculateStepOneError = (title, name, dateOfBirth) => {
-  const emptyString = ''
+const emptyString = ''
 
-  return !title || name === emptyString || dateOfBirth === emptyString
+const calculateStepOneComplete = (title, name, dateOfBirth) => {
+  return title && name !== emptyString && dateOfBirth !== emptyString
+}
+
+const calculateStepTwoComplete = (feedback, location) => {
+  return feedback !== emptyString && location !== emptyString
 }
 
 export default createSelector(
@@ -13,7 +17,8 @@ export default createSelector(
   formState => {
     return {
       ...formState,
-      stepOneError: calculateStepOneError(formState.title, formState.name, formState.dateOfBirth),
+      stepOneComplete: calculateStepOneComplete(formState.title, formState.name, formState.dateOfBirth),
+      stepTwoComplete: calculateStepTwoComplete(formState.feedback, formState.location),
       currentDateTime: formState.currentDateTime || moment().format('YYYY-MM-DDTHH:mm'),
     }
   },

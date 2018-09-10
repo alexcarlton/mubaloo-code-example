@@ -7,11 +7,11 @@ import formSelector from '~/redux/selectors/form'
 class StepOneContainer extends Component {
   render() {
     const { dispatch, form } = this.props
-    const { name, title, dateOfBirth, stepOneError } = form
+    const { name, title, dateOfBirth, stepOneComplete } = form
 
     return (
       <StepOne
-        stepOneError={stepOneError}
+        stepOneComplete={stepOneComplete}
         title={title}
         updateTitle={newTitle => dispatch(updateTitle(newTitle))}
         name={name}
