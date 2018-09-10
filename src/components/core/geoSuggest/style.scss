@@ -1,0 +1,13 @@
+@import '~/style/theme';
+
+.container {
+  flex-direction: column;
+}
+
+.suggestionsContainer {
+  flex-direction: column;
+  background-color: $input-background-color;
+  font-size: $font-size-normal;
+  padding: 0 $extra-small-spacing;
+  border-radius: 5px;
+}

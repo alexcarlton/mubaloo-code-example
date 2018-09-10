@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from '~/components/core/container'
-import Div from '~/components/core/div'
+import InputContainer from '~/components/core/inputContainer'
+import InputsContainer from '~/components/core/inputsContainer'
 import DropDown from '~/components/core/dropDown'
 import Label from '~/components/core/label'
 import TextInput from '~/components/core/textInput'
@@ -8,18 +9,12 @@ import DatePicker from '~/components/core/datePicker'
 import LinkButton from '~/components/core/linkButton'
 import { H1 } from '~/components/core/text'
 import titles from './titles'
-import style from './style'
-
-const InputContainer = props => {
-  const { children } = props
-  return <Div className={style.inputContainer}>{children}</Div>
-}
 
 export default props => {
   const { updateTitle, updateName, updateDateOfBirth, dateOfBirth, name, title, stepOneError } = props
 
   return (
-    <Container className={style.inputsContainer}>
+    <InputsContainer>
       <H1>Step 1</H1>
       <InputContainer>
         <Label htmlFor="titleInput">Title</Label>
@@ -38,6 +33,6 @@ export default props => {
           next
         </LinkButton>
       </InputContainer>
-    </Container>
+    </InputsContainer>
   )
 }

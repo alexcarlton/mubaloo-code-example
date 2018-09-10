@@ -1,3 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { updateLocation } from '~/redux/actions/form'
+import StepTwo from '~/components/stepTwo'
+import formSelector from '~/redux/selectors/form'
 
-export default () => <h1>Step Two</h1>
+class StepTwoContainer extends Component {
+  render() {
+    const { dispatch, form } = this.props
+    const { location } = form
+
+    return <StepTwo location={location} updateLocation={newLocation => dispatch(updateLocation(newLocation))} />
+  }
+}
+
+export default connect(state => ({ form: formSelector(state) }))(StepTwoContainer)

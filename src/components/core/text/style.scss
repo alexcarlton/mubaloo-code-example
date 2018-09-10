@@ -1,5 +1,9 @@
 @import '~/style/theme';
 
-h1 {
+.h1 {
   font-size: $font-size-large;
+}
+
+.p {
+  margin: $extra-extra-small-spacing 0;
 }
