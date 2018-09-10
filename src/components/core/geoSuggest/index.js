@@ -1,53 +1,37 @@
 import React from 'react'
+import _ from 'lodash'
+import Div from '~/components/core/div'
 import PlacesAutocomplete from 'react-places-autocomplete'
+import TextInput from '~/components/core/textInput'
+import { Text } from '~/components/core/text'
+import style from './style'
 
 class LocationSearchInput extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { address: '' }
-    this.handleChange = this.handleChange.bind(this)
-  }
-
   handleChange(address) {
-    this.setState({ address })
-  }
+    const { updateLocation } = this.props
 
-  handleSelect(address) {
-    console.log(address)
+    updateLocation(address)
   }
 
   render() {
+    const { location, id } = this.props
+
     return (
-      <PlacesAutocomplete value={this.state.address} onChange={this.handleChange} onSelect={this.handleSelect}>
+      <PlacesAutocomplete value={location} onChange={newLocation => this.handleChange(newLocation)} onSelect={newLocation => this.handleChange(newLocation)}>
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-          <div>
-            <input
-              {...getInputProps({
-                placeholder: 'Search Places ...',
-                className: 'location-search-input',
-              })}
-            />
-
-            <div className="autocomplete-dropdown-container">
-              {loading && <div>Loading...</div>}
-
-              {suggestions.map(suggestion => {
-                const className = suggestion.active ? 'suggestion-item--active' : 'suggestion-item'
-                // inline style for demonstration purpose
-                const style = suggestion.active ? { backgroundColor: '#fafafa', cursor: 'pointer' } : { backgroundColor: '#ffffff', cursor: 'pointer' }
+          <Div id={id} className={style.container}>
+            <TextInput {...getInputProps()} />
+            <Div className={style.suggestionsContainer}>
+              {loading && <Text>Loading...</Text>}
+              {_.map(suggestions, suggestion => {
                 return (
-                  <div
-                    {...getSuggestionItemProps(suggestion, {
-                      className,
-                      style,
-                    })}
-                  >
-                    <span>{suggestion.description}</span>
-                  </div>
+                  <Div {...getSuggestionItemProps(suggestion)}>
+                    <Text>{suggestion.description}</Text>
+                  </Div>
                 )
               })}
-            </div>
-          </div>
+            </Div>
+          </Div>
         )}
       </PlacesAutocomplete>
     )

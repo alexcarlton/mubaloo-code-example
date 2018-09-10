@@ -10,3 +10,13 @@ export const H1 = props => {
     </h1>
   )
 }
+
+export const Text = props => {
+  const { children } = props
+
+  return (
+    <p {...props} className={style.p}>
+      {children}
+    </p>
+  )
+}
