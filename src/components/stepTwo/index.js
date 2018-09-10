@@ -53,8 +53,8 @@ class StepTwo extends Component {
           <Label htmlFor="feedbackInput">What did you think of this form?</Label>
           <TextArea id="feedbackInput" onChange={event => updateFeedback(event.target.value)} value={feedback} />
         </InputContainer>
-        <InputContainer>
-          <Button disabled={!stepTwoComplete || submittingData} onClick={() => this.submitUserData()}>
+        <InputContainer htmlFor="submitButton">
+          <Button id="submitButton" disabled={!stepTwoComplete || submittingData} onClick={() => this.submitUserData()}>
             submit
           </Button>
         </InputContainer>
