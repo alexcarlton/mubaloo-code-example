@@ -7,7 +7,7 @@ import { Text } from '~/components/core/text'
 import style from './style'
 
 // Location search component
-// Text input with automatic dropdow for suggested locations
+// Text input with automatic dropdown for suggested locations
 class LocationSearchInput extends React.Component {
   // handleChange - calls the update location action
   handleChange(address) {

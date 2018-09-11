@@ -16,7 +16,7 @@ export const updateFeedback = feedback => ({ type: 'form/UPDATE_FEEDBACK', paylo
 
 export const reset = () => ({ type: 'form/RESET' })
 
-// Define an action in the reudx-thunk style, and make an asychronous call
+// Define an action in the redux-thunk style, and make an asychronous call
 export const submitUserData = () => {
   return async (dispatch, getState) => {
     dispatch({ type: 'form/SUBMIT_USER_DATA_REQUEST' })
