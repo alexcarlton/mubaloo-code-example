@@ -1,3 +1,4 @@
+// Title values, as objects required by the options prop of react-select
 export default [
   { value: 'Mr', label: 'Mr' },
   { value: 'Mrs', label: 'Mrs' },

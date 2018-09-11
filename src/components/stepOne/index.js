@@ -28,6 +28,7 @@ export default props => {
         <DatePicker id="dateOfBirthInput" value={dateOfBirth} onChange={event => updateDateOfBirth(event.target.value)} />
       </InputContainer>
       <InputContainer>
+        {/* Button is disabled until step one is complete */}
         <LinkButton disabled={!stepOneComplete} to="/stepTwo">
           next
         </LinkButton>

@@ -4,6 +4,7 @@ import StepTwo from './containers/stepTwo'
 import Thanks from './containers/thanks'
 import SubmissionError from './containers/error'
 
+// Array of objects containing routes and corresponding components
 export const routes = [
   { path: '/', component: Landing, exact: true },
   { path: '/stepOne', component: StepOne, exact: false },

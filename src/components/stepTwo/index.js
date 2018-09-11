@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router'
 import InputContainer from '~/components/core/inputContainer'
 import InputsContainer from '~/components/core/inputsContainer'
-import Geosuggest from '~/components/core/geoSuggest'
+import LocationSearchInput from '~/components/core/LocationSearchInput'
 import DateTimePicker from '~/components/core/dateTimePicker'
 import Button from '~/components/core/button'
 import Label from '~/components/core/label'
@@ -43,7 +43,7 @@ class StepTwo extends Component {
         <H1>Step 2</H1>
         <InputContainer>
           <Label htmlFor="locationInput">Location</Label>
-          <Geosuggest id="locationInput" updateLocation={updateLocation} location={location} />
+          <LocationSearchInput id="locationInput" updateLocation={updateLocation} location={location} />
         </InputContainer>
         <InputContainer>
           <Label htmlFor="currentDateTimeInput">Current date and time</Label>

@@ -1,6 +1,7 @@
 import React from 'react'
 import style from './style'
 
+// H1 component with default styling
 export const H1 = props => {
   const { children } = props
 
@@ -11,6 +12,7 @@ export const H1 = props => {
   )
 }
 
+// Text (p) component with default styling
 export const Text = props => {
   const { children } = props
 

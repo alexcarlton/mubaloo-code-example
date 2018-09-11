@@ -1,6 +1,5 @@
 import React from 'react'
 import TextField from '@material-ui/core/TextField'
 
-export default props => {
-  return <TextField {...props} type="date" />
-}
+// Date picker component from the material-ui library
+export default props => <TextField {...props} type="date" />

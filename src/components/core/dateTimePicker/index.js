@@ -1,6 +1,5 @@
 import React from 'react'
 import TextField from '@material-ui/core/TextField'
 
-export default props => {
-  return <TextField {...props} type="datetime-local" />
-}
+// Date and time picker from the material-ui library
+export default props => <TextField {...props} type="datetime-local" />
