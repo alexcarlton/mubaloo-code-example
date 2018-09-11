@@ -27,8 +27,8 @@
 - [Lint-staged](https://github.com/okonet/lint-staged), to check staged files with Prettier and ESlint. Ensures bad code is not committed
 
 ## Libraries
-[Material UI](https://material-ui.com/), for modern UI elements
-[Lodash](https://lodash.com/), for modern JavaScript utility functions
-[Superagent](https://visionmedia.github.io/superagent/), for making HTTP requests
-[React-select](https://github.com/JedWatson/react-select), for creating a dropdown menu
-[React-places-autocomplete](https://github.com/hibiken/react-places-autocomplete), a component to build a customized UI for [Google Maps Places Autocomplete](https://developers.google.com/places/web-service/autocomplete)
+- [Material UI](https://material-ui.com/), for modern UI elements
+- [Lodash](https://lodash.com/), for modern JavaScript utility functions
+- [Superagent](https://visionmedia.github.io/superagent/), for making HTTP requests
+- [React-select](https://github.com/JedWatson/react-select), for creating a dropdown menu
+- [React-places-autocomplete](https://github.com/hibiken/react-places-autocomplete), a component to build a customized UI for [Google Maps Places Autocomplete](https://developers.google.com/places/web-service/autocomplete)
