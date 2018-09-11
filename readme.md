@@ -20,7 +20,7 @@
 - [Express](https://expressjs.com/), for serving the app and API endpoint
 - [Babel](https://babeljs.io/), for transpiling ES6/7 code to vanilla JS
 - [Webpack](https://webpack.js.org/), as a module bundler
-- [SASS](https://sass-lang.com/), for modern CSS
+- [Sass](https://sass-lang.com/), for modern CSS
 - [Async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function), for handling asynchronous code
 - [Prettier](https://prettier.io/), to auto format code
 - [ESlint](https://eslint.org/), to check code for common mistakes
