@@ -31,8 +31,8 @@ export default function form(state = initialState, action) {
       return { ...state, submittingData: false, dataSubmitted: true }
     case 'form/SUBMIT_USER_DATA_ERROR':
       return { ...state, submittingData: false, submissionError: true }
-    case 'form/RESET_DATA':
-      return { ...state, submissionError: false, dataSubmitted: false }
+    case 'form/RESET':
+      return initialState
     default:
       return state
   }

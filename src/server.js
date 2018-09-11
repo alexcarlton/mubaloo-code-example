@@ -26,12 +26,14 @@ app.use(
   }),
 )
 
+// For POST requests to the /answers endpoint, log the request body
 app.post('/answers', (request, response) => {
   console.log('User Data:')
   console.log(request.body)
   response.send()
 })
 
+// For all GET requests, return index.html
 app.get('*', (request, response) => {
   response.sendFile(path.join(__dirname, '../src/index.html'))
 })

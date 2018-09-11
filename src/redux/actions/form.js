@@ -14,12 +14,16 @@ export const updateCurrentDateTime = currentDateTime => ({ type: 'form/UPDATE_CU
 
 export const updateFeedback = feedback => ({ type: 'form/UPDATE_FEEDBACK', payload: feedback })
 
-export const resetData = () => ({ type: 'form/RESET_DATA' })
+export const reset = () => ({ type: 'form/RESET' })
 
+// Define an action in the reudx-thunk style, and make an asychronous call
 export const submitUserData = () => {
   return async (dispatch, getState) => {
     dispatch({ type: 'form/SUBMIT_USER_DATA_REQUEST' })
+
+    // Get the form state by passing state to the form selector
     const formData = formSelector(getState())
+
     const { title, name, dateOfBirth, location, currentDateTime, feedback } = formData
 
     try {

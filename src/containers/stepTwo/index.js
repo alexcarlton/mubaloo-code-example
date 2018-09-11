@@ -27,4 +27,5 @@ class StepTwoContainer extends Component {
   }
 }
 
+// Connect StepTwoContainer to state and dispatch
 export default connect(state => ({ form: formSelector(state) }))(StepTwoContainer)

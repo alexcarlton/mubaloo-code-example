@@ -3,6 +3,7 @@ import Div from '~/components/core/div'
 import classNames from 'classnames'
 import style from './style.scss'
 
+// Container for the app with default styling
 export default props => {
   const { children, className } = props
 

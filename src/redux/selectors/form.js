@@ -11,6 +11,7 @@ const calculateStepTwoComplete = (feedback, location) => {
   return feedback !== emptyString && location !== emptyString
 }
 
+// Create new state derived from redux state
 export default createSelector(
   'form',
   state => state.form,
